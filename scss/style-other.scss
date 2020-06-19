@@ -99,13 +99,23 @@ body {
 		}
 	}
 	h3 {
+		position: relative;
 		margin: 0;
 		padding: 1.5em 0 .75em;
 		text-transform: uppercase;
 		font-size: 1.65em;
-		color: $blue;
+		color: #333333;
 		text-align: center;
 		font-weight: 700;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 50px;
+			height: 3px;
+			background-color: $orange;
+			bottom: 7px;
+			@include center-x;
+		}
 	}
 	.hr-sellers {
 		padding: 1em 0 0;
@@ -132,7 +142,7 @@ body {
 				padding: 0 15px;
 				h4 {
 					padding: 0;
-					font-size: 1.25em;
+					font-size: 1em;
 				}
 				p {
 					display: block;
@@ -144,16 +154,16 @@ body {
 					text-align: center;
 					font-weight: 700;
 					@media (max-width: 480px) {
-						font-size: 1.125em;
+						font-size: 1.1em;
 					}
 				}
 				&:first-child {
 					&:after {
 						content: "";
 						position: absolute;
-						width: 2px;
+						width: 1px;
 						height: 80%;
-						background-color: $orange;
+						background-color: #999999;
 						right: 0;
 						@include center-y;
 					}
